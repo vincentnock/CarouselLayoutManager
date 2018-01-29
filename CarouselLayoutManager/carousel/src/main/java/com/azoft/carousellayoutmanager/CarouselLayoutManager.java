@@ -358,14 +358,14 @@ public class CarouselLayoutManager extends RecyclerView.LayoutManager implements
             mPendingScrollPosition = 0 == itemsCount ? INVALID_POSITION : Math.max(0, Math.min(itemsCount - 1, mPendingScrollPosition));
         }
         if (INVALID_POSITION != mPendingScrollPosition) {
-            mLayoutHelper.mScrollOffset = calculateScrollForSelectingPosition(mPendingScrollPosition, state);
+//            mLayoutHelper.mScrollOffset = calculateScrollForSelectingPosition(mPendingScrollPosition, state);
             mPendingScrollPosition = INVALID_POSITION;
             mPendingCarouselSavedState = null;
         } else if (null != mPendingCarouselSavedState) {
-            mLayoutHelper.mScrollOffset = calculateScrollForSelectingPosition(mPendingCarouselSavedState.mCenterItemPosition, state);
+//            mLayoutHelper.mScrollOffset = calculateScrollForSelectingPosition(mPendingCarouselSavedState.mCenterItemPosition, state);
             mPendingCarouselSavedState = null;
         } else if (state.didStructureChange() && INVALID_POSITION != mCenterItemPosition) {
-            mLayoutHelper.mScrollOffset = calculateScrollForSelectingPosition(mCenterItemPosition, state);
+//            mLayoutHelper.mScrollOffset = calculateScrollForSelectingPosition(mCenterItemPosition, state);
         }
 
         fillData(recycler, state, childMeasuringNeeded);
